@@ -13,7 +13,11 @@ const calistoga = Calistoga({
 export const metadata: Metadata = {
 	title: "My Portfolio",
 	description: "A showcase of my work and skills",
-	viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport = {
+	width: "device-width",
+	initialScale: 1,
 };
 
 export default function RootLayout({
