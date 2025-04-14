@@ -1,6 +1,7 @@
 import mobileApps from "@/assets/images/mobile-apps.png";
+import kudataWeb from "@/assets/images/kudata-web.png";
+import furnitureWeb from "@/assets/images/furniture-web.png";
 import ayamBagoWeb from "@/assets/images/ayam-bago-web.png";
-import personalWebVer1 from "@/assets/images/personal-web-ver-1.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -10,42 +11,94 @@ import { Card } from "@/components/Card";
 
 const portfolioProjects = [
 	{
-		company: "Acme Corp",
-		year: "2022",
-		title: "Dark Saas Landing Page",
+		company: "Kudata",
+		position: "Frontend Engineer Intern",
+		year: "2025",
+		title: "Kudata Website",
 		results: [
-			{ title: "Enhanced user experience by 40%" },
-			{ title: "Improved site speed by 50%" },
-			{ title: "Increased mobile traffic by 35%" },
+			{
+				title:
+					"Improve frontend test reliability by increasing unit test function coverage to 80%+ using Vue Test Utils",
+			},
+			{
+				title:
+					"Collaborate with the frontend team to refine testing strategies and maintain high code quality",
+			},
+			{
+				title:
+					"Enhance UI components based on user needs to improve the overall user experience",
+			},
 		],
 		link: "https://youtu.be/4k7IdSLxh6w",
+		github: "https://github.com/gustiwdr/laravel-restaurant-reservation",
+		image: kudataWeb,
+	},
+	{
+		company: "PT Bima Digital Indonesia",
+		position: "Frontend Web Developer Intern",
+		year: "2025",
+		title: "Furniture Website using Next.js",
+		results: [
+			{
+				title:
+					"Develop 5+ new responsive web features by collaborating with UI/UX designers ensuring optimal display across various devices ",
+			},
+			{
+				title:
+					"Improve website performance and responsiveness by optimizing asset loading and component rendering in Next.js, leading to a smoother user experience ",
+			},
+			{
+				title:
+					"Enhance development efficiency by 30% by implementing reusable UI components with Tailwind CSS",
+			},
+		],
+		link: "",
 		github: "https://github.com",
+		image: furnitureWeb,
+	},
+	{
+		company: "Self Project",
+		year: "2024",
+		title: "Restaurant Table Reservation Website using Laravel",
+		results: [
+			{
+				title:
+					"Developed and maintained the back-end of a Laravel-based restaurant reservation system for efficient data handling and performance.",
+			},
+			{
+				title:
+					"Collaborated on front-end adjustments to enhance user experience and interface usability",
+			},
+			{
+				title:
+					"Worked with business analysts to align system features with real-world restaurant management needs.",
+			},
+		],
+		link: "",
+		github: "https://github.com/gustiwdr/laravel-restaurant-reservation",
 		image: ayamBagoWeb,
 	},
+
 	{
-		company: "Innovative Co",
-		year: "2021",
-		title: "Light Saas Landing Page",
+		company: "Self Project",
+		year: "2025",
+		title: "HealthyLife Fit Hub",
 		results: [
-			{ title: "Boosted sales by 20%" },
-			{ title: "Expanded customer reach by 35%" },
-			{ title: "Increased brand awareness by 15%" },
+			{
+				title:
+					"Developed a health & fitness mobile app with secure login and integrated database",
+			},
+			{
+				title:
+					"Features include personalized profiles, service pages, and a list of professional coaches",
+			},
+			{
+				title:
+					"Built as a campus project to promote healthy living through tech with a simple UX",
+			},
 		],
-		link: "https://youtu.be/7hi5zwO75yc",
-		github: "https://github.com",
-		image: personalWebVer1,
-	},
-	{
-		company: "Quantum Dynamics",
-		year: "2023",
-		title: "AI Startup Landing Page",
-		results: [
-			{ title: "Enhanced user experience by 40%" },
-			{ title: "Improved site speed by 50%" },
-			{ title: "Increased mobile traffic by 35%" },
-		],
-		link: "https://youtu.be/Z7I5uSRHMHg",
-		github: "https://github.com",
+		link: "",
+		github: "https://github.com/gustiwdr/fithub-mobile-apps-project",
 		image: mobileApps,
 	},
 ];
@@ -72,6 +125,9 @@ export const ProjectsSection = () => {
 										<span>&bull;</span>
 										<span>{project.year}</span>
 									</div>
+									<p className="bg-gradient-to-r from-emerald-300 to-sky-400 uppercase text-sm text-transparent bg-clip-text mt-1">
+										{project.position}
+									</p>
 									<h3 className="font-serif text-2xl md:text-4xl mt-2 md:mt-5">
 										{project.title}
 									</h3>
