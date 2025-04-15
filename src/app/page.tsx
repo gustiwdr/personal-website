@@ -8,16 +8,16 @@ import { ContactSection } from "@/sections/Contact";
 import { Footer } from "@/sections/Footer";
 
 export default function Home() {
-  return (
-    <div>
-      <Header />
-      <HeroSection />
-      <ProjectsSection />
-      <TapeSection />
-      <TestimonialsSection />
-      <AboutSection />
-      <ContactSection />
-      <Footer />
-    </div>
-  );
+	return (
+		<div>
+			<Header />
+			<HeroSection />
+			<ProjectsSection />
+			<TapeSection />
+			{/* <TestimonialsSection /> */}
+			<AboutSection />
+			<ContactSection />
+			<Footer />
+		</div>
+	);
 }
