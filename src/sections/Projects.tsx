@@ -14,7 +14,7 @@ const portfolioProjects = [
 		company: "Kudata",
 		position: "Frontend Engineer Intern",
 		year: "2025",
-		title: "Kudata Website",
+		title: "Kudata Website Enhancement",
 		results: [
 			{
 				title:
@@ -29,8 +29,8 @@ const portfolioProjects = [
 					"Enhance UI components based on user needs to improve the overall user experience",
 			},
 		],
-		link: "https://youtu.be/4k7IdSLxh6w",
-		github: "https://github.com/gustiwdr/laravel-restaurant-reservation",
+		link: "https://kudata.id/",
+		github: "",
 		image: kudataWeb,
 	},
 	{
