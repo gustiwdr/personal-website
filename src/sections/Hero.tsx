@@ -1,3 +1,4 @@
+"use client";
 import memojiImage from "@/assets/images/image.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
@@ -14,10 +15,10 @@ export const HeroSection = () => {
 					className="absolute inset-0 -z-30 opacity-5"
 					style={{ backgroundImage: `url(${grainImage.src})` }}
 				></div>
-				<div className="size-[620px] hero-ring"></div>
-				<div className="size-[820px] hero-ring"></div>
-				<div className="size-[1020px] hero-ring"></div>
-				<div className="size-[1220px] hero-ring"></div>
+				<div className="size-[620px] hero-ring pointer-events-none"></div>
+				<div className="size-[820px] hero-ring pointer-events-none"></div>
+				<div className="size-[1020px] hero-ring pointer-events-none"></div>
+				<div className="size-[1220px] hero-ring pointer-events-none"></div>
 				<HeroOrbit
 					size={430}
 					rotation={-14}
@@ -98,7 +99,7 @@ export const HeroSection = () => {
 					<StarIcon className="size-28 text-emerald-300" />
 				</HeroOrbit>
 			</div>
-			<div className="container">
+			<div className="container relative z-10">
 				<div className="flex flex-col items-center">
 					<Image src={memojiImage} className="size-[100px]" alt="Person" />
 					<div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
@@ -121,14 +122,27 @@ export const HeroSection = () => {
 					</p>
 				</div>
 				<div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-					<button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+					<button
+						className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl cursor-pointer"
+						onClick={() => {
+							const el = document.getElementById("project");
+							console.log("Scroll to project:", el);
+							if (el) {
+								el.scrollIntoView({ behavior: "smooth" });
+							}
+						}}
+					>
 						<span className="font-semibold">Explore My Work</span>
 						<ArrowDown className="size-4" />
 					</button>
-					<button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
-						<span>👋🏻 </span>
-						<span className="font-semibold">Let&apos;s Connect!</span>
-					</button>
+					<a
+						href="/CV_Gusti_Putu_Wulandari.pdf"
+						download="CV_Gusti_Putu_Wulandari.pdf"
+						className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl hover:bg-gray-100 transition-colors"
+					>
+						<span>📄</span>
+						<span className="font-semibold">Download CV</span>
+					</a>
 				</div>
 			</div>
 		</div>
