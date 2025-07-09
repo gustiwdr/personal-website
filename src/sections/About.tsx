@@ -130,7 +130,7 @@ const hobbies = [
 export const AboutSection = () => {
 	const constraintRef = useRef(null);
 	return (
-		<div className="py-20 lg:py-28">
+		<div className="py-20 lg:py-28" id="about">
 			<div className="container">
 				<SectionHeader
 					eyebrow="About Me"
@@ -163,7 +163,7 @@ export const AboutSection = () => {
 							<ToolboxItems
 								items={toolboxItems}
 								className="mt-6"
-								itemsWrapClassName="animate-move-right [animation-duration:15s]"
+								itemsWrapClassName="animate-move-right [animation-duration:30s]"
 							/>
 						</Card>
 					</div>
