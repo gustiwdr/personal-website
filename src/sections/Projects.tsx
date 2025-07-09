@@ -2,6 +2,8 @@ import mobileApps from "@/assets/images/mobile-apps.png";
 import kudataWeb from "@/assets/images/kudata-web.png";
 import furnitureWeb from "@/assets/images/furniture-web.png";
 import ayamBagoWeb from "@/assets/images/ayam-bago-web.png";
+import dashboardJobPortal from "@/assets/images/dashboardJobPortal.png";
+import cultureMonitor from "@/assets/images/cultureMonitor.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -18,15 +20,15 @@ const portfolioProjects = [
 		results: [
 			{
 				title:
-					"Improve frontend test reliability by increasing unit test function coverage to 80%+ using Vue Test Utils",
+					"Collaborated with the frontend team to develop a testing strategy using Vue Test Utils, increasing unit test coverage to 80% and improving test reliability and stability",
 			},
 			{
 				title:
-					"Collaborate with the frontend team to refine testing strategies and maintain high code quality",
+					"Refined UI components based on user feedback during development, resulting in a more user-friendly and intuitive experience",
 			},
 			{
 				title:
-					"Enhance UI components based on user needs to improve the overall user experience",
+					"Worked closely with the backend team to design data flows and build new features, ensuring seamless component integration and optimal functionality",
 			},
 		],
 		link: "https://kudata.id/",
@@ -41,18 +43,18 @@ const portfolioProjects = [
 		results: [
 			{
 				title:
-					"Develop 5+ new responsive web features by collaborating with UI/UX designers ensuring optimal display across various devices ",
+					"Participated in building a 8-page website, contributing to planning, UI design, and implementation using Next.js",
 			},
 			{
 				title:
-					"Improve website performance and responsiveness by optimizing asset loading and component rendering in Next.js, leading to a smoother user experience ",
+					"Improved website performance and responsiveness by optimizing asset loading and rendering techniques",
 			},
 			{
 				title:
-					"Enhance development efficiency by 30% by implementing reusable UI components with Tailwind CSS",
+					"Boosted development efficiency by 30% through the creation and implementation of reusable UI components with Tailwind CSS",
 			},
 		],
-		link: "",
+		link: "https://furniture-website-ten.vercel.app/",
 		github: "https://github.com",
 		image: furnitureWeb,
 	},
@@ -78,34 +80,55 @@ const portfolioProjects = [
 		github: "https://github.com/gustiwdr/laravel-restaurant-reservation",
 		image: ayamBagoWeb,
 	},
-
 	{
 		company: "Self Project",
 		year: "2025",
-		title: "HealthyLife Fit Hub",
+		title: "Dashboard Job Portal using Next.js",
 		results: [
 			{
 				title:
-					"Developed a health & fitness mobile app with secure login and integrated database",
+					"Built a fullstack web app with Next.js, styled using Tailwind CSS and shadcn/ui for responsive and reusable components.",
 			},
 			{
 				title:
-					"Features include personalized profiles, service pages, and a list of professional coaches",
+					"Integrated Prisma ORM for database access and created secure authentication flows with NextAuth, including login and protected pages.",
 			},
 			{
 				title:
-					"Built as a campus project to promote healthy living through tech with a simple UX",
+					"Added file upload features with Supabase Storage, enabling users to store and manage files in the app.",
 			},
 		],
 		link: "",
-		github: "https://github.com/gustiwdr/fithub-mobile-apps-project",
-		image: mobileApps,
+		github: "https://github.com/gustiwdr/dashboard-job-portal-project",
+		image: dashboardJobPortal,
+	},
+	{
+		company: "Self Project",
+		year: "2025",
+		title: "Culture Monitoring System",
+		results: [
+			{
+				title:
+					"Built a Culture Monitoring System using Laravel 8 and PostgreSQL, enabling submission, approval, and tracking of internal cultural activities across different roles.",
+			},
+			{
+				title:
+					"Implemented role-based access for Culture Agents, Division Heads, and Admin HC, each with specific permissions for submitting, reviewing, and approving activities.",
+			},
+			{
+				title:
+					"Developed monitoring and reporting features, including activity status tracking (Scheduled, Done, Canceled) and detailed reports with attendees, summaries, and photo documentation.",
+			},
+		],
+		link: "",
+		github: "https://github.com/gustiwdr/culture-monitoring-system",
+		image: cultureMonitor,
 	},
 ];
 
 export const ProjectsSection = () => {
 	return (
-		<section className="pb-16">
+		<section className="pb-16" id="project">
 			<div className="container">
 				<SectionHeader
 					eyebrow="Real-world Results"
@@ -128,7 +151,7 @@ export const ProjectsSection = () => {
 										<span>&bull;</span>
 										<span>{project.year}</span>
 									</div>
-									<p className="bg-gradient-to-r from-emerald-300 to-sky-400 uppercase text-sm text-transparent bg-clip-text mt-1">
+									<p className="bg-gradient-to-r from-emerald-300 to-sky-400 font-bold uppercase text-sm text-transparent bg-clip-text mt-1">
 										{project.position}
 									</p>
 									<h3 className="font-serif text-2xl md:text-4xl mt-2 md:mt-5">
@@ -147,29 +170,29 @@ export const ProjectsSection = () => {
 										))}
 									</ul>
 									<div className="flex items-center gap-6 mt-8">
-										<a href={project.link}>
-											<button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2">
-												<span>Visit Live Site</span>
-												<ArrowUpRightIcon className="size-4" />
-											</button>
-										</a>
-										<a
-											href={project.github}
-											target="_blank"
-											className="flex items-center"
-										>
-											<GitHubIcon
-												className="size-12 text-white/90"
-												fill="currentColor"
-											/>
-										</a>
+										{project.link && (
+											<a href={project.link}>
+												<button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2">
+													<span>Live Site</span>
+													<ArrowUpRightIcon className="size-4" />
+												</button>
+											</a>
+										)}
+										{project.github && (
+											<a href={project.github} target="_blank">
+												<button className="bg-transparent border border-white/20 text-white h-12 px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 hover:bg-white/10 transition-colors">
+													<GitHubIcon className="size-4" fill="currentColor" />
+													<span>GitHub</span>
+												</button>
+											</a>
+										)}
 									</div>
 								</div>
 								<div className="relative">
 									<Image
 										src={project.image}
 										alt={project.title}
-										className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+										className={`mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none`}
 									/>
 								</div>
 							</div>
