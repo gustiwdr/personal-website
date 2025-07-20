@@ -14,7 +14,7 @@ This project also serves as a practical application of my skills in modern web d
 * **Programming Language:** JavaScript
 * **Styling:** Tailwind CSS
 * **Deployment:** Vercel
-* **AI Assistant:** IBM Granite
+* **AI Assistant:** IBM Granite, Claude Sonnet 4
 
 ---
 
@@ -59,11 +59,11 @@ To run this project locally, follow these steps:
 
 ## AI Support Explanation
 
-This project was developed with the assistance of **IBM Granite**, an AI model that streamlined various aspects of the development workflow. Here’s how it was used:
+This project was developed with the assistance of **IBM Granite** and **Claude Sonnet 4**, an AI model that streamlined various aspects of the development workflow. Here’s how it was used:
 
 * **Code Generation & Refactoring:** IBM Granite was instrumental in generating boilerplate code for Next.js components and Tailwind CSS classes. It helped in quickly scaffolding the structure for each section (Hero, About, Projects). It also assisted in refactoring JavaScript functions for better performance and readability.
 
-* **Problem Solving & Debugging:** When encountering challenges, such as implementing specific Tailwind CSS configurations or Next.js features, I used IBM Granite as a troubleshooting partner. By describing the problem, the AI could suggest potential solutions, provide relevant code snippets, and explain complex concepts.
+* **Problem Solving & Debugging:** When encountering challenges, such as implementing specific Tailwind CSS configurations or Next.js features, I used IBM Granite and Claude Sonnet 4 as a troubleshooting partner. By describing the problem, the AI could suggest potential solutions, provide relevant code snippets, and explain complex concepts.
 
 * **Content & Copywriting:** The textual content for the "About Me" and project description sections was drafted and refined with help from IBM Granite. It provided ideas for professional and engaging copy, which I then personalized to reflect my own voice.
 
