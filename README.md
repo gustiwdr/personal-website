@@ -54,17 +54,3 @@ To run this project locally, follow these steps:
     # yarn dev
     ```
 5.  Open `http://localhost:3000` in your browser to see the result.
-
----
-
-## AI Support Explanation
-
-This project was developed with the assistance of AI models, including **IBM Granite** and **Claude Sonnet 4**, which streamlined various aspects of the development workflow. Here’s how they were used:
-
-* **Code Generation & Refactoring:** AI assistants were instrumental in generating boilerplate code for Next.js components and Tailwind CSS classes. They helped quickly scaffold the structure for each section (Hero, About, Projects) and assisted in refactoring JavaScript functions for better performance and readability.
-
-* **Problem Solving & Debugging:** When encountering challenges with specific Tailwind CSS configurations or Next.js features, both **IBM Granite** and **Claude Sonnet 4** served as troubleshooting partners. By describing the problem, the models could suggest potential solutions, provide relevant code snippets, and explain complex concepts.
-
-* **Content & Copywriting:** AI also assisted in drafting and refining the textual content for the "About Me" and project description sections. It provided ideas for professional and engaging copy, which I then personalized to reflect my own voice.
-
-* **Documentation:** Finally, this `README.md` file was structured and partially written with AI assistance to ensure it is clear, comprehensive, and accurately reflects the project's structure and technology stack.
